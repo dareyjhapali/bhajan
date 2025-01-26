@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(189, 184, 184); /* Light gray background */
+    color: white; /* Text color for better contrast */
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #b3db00; /* Greenish header background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Bhajan List Section */
+.bhajan-list {
+    position: relative; /* For background image layering */
+    width: 100%;
+    max-width: 400px;
+}
+
+.bhajan-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('shiva.jpg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Transparency for overlay effect */
+    z-index: -1; /* Place behind the content */
+}
+
+.bhajan-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1; /* Keep list items above the background */
+}
+
+.bhajan-item {
+    background-color: rgba(202, 197, 197, 0.7); /* Semi-transparent white */
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.bhajan-item:hover {
+    background-color: #a0eb0a; /* Highlight on hover */
+}
+
+/* Audio Player Section */
+.player {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #080808; /* Dark footer background */
+    color: white;
+    font-size: 0.9rem;
+}
